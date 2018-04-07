@@ -1,28 +1,124 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://necolas.github.io/normalize.css/8.0.0/normalize.css');
 
 $brand-purple: rgb(135, 140, 223);
 $brand-green: rgb(153, 251, 198);
 $font-size: 5rem;
 $roboto: "Roboto", sans-serif;
 
-boxdy {
-  height: 100vh;
+body {
+  /*height: 100vh;
   background-color: $brand-purple;
   color: $brand-green;
   font-size: $font-size;
-  font-weight: 900;
+  font-weight: 900;*/
   font-family: $roboto;
 }
 
-.containexxr {
+/*
+.listsContainer {
+    width: 100%;
+}
+
+.left {
+    border-right: 1px solid black;
+}
+
+.right {
+    border-left: 1px solid black;
+}
+
+.borderBottom {
+    border-bottom: 2px solid black;
+}
+
+.myh6 {
+    margin: 0;
+    padding: 2.33em;
+    box-sizing: border-box;
+}
+
+.boxShadow {
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+*/
+
+#bodyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contentContainer {
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
+
+#mainTitle {
+  background: gray;
+margin: 0;
+padding: 0.67em;
+box-sizing: border-box;
+width: 100%;
+text-align: center;
+}
+
+#listsContainer {
   width: 100%;
   display: flex;
-  .image_wrapper {
-    display: inline-block;
-    margin: 0 10px;
-    &__image {
-      width: auto;
-      height: 300px;
-    }
-  }
+  justify-content: center;
+  align-items: center;
+}
+
+.listContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.listTitle {
+    margin: 0;
+    padding: 2.33em;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+#leftList {
+  border-right: 1px solid black;
+}
+
+.container {
+  display: flex;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+.width100p {
+  width: 100%;
+}
+
+.width80p {
+  width: 80%;
+}
+
+.width50p {
+  width: 50%;
+}
+
+.flexDirCol {
+  flex-direction: column;
+}
+
+.centralize {
+  justify-content: center;
+  align-items: center;
 }

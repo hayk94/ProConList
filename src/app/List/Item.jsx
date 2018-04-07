@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Item = props => <li id={`${props.elemId}`} className={`list__item ${props.className}`}>
+const Item = props => <li id={`${props.elemId || ''}`} className={`list__item ${props.className || ''}`}>
   {props.children}
 </li>
 
