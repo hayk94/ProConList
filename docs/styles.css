@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);@import url(https://necolas.github.io/normalize.css/8.0.0/normalize.css);body {
+  font-family: "Roboto", sans-serif; }
+
+#bodyContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+#contentContainer {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 80%; }
+
+#mainTitle {
+  background: gray;
+  margin: 0;
+  padding: 0.67em;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center; }
+
+#listsContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.listContainer {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.listTitle {
+  margin: 0;
+  padding: 2.33em;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid black; }
+
+#leftList {
+  border-right: 1px solid black; }
+
+.list {
+  min-height: 100px;
+  max-height: 500px;
+  overflow: scroll;
+  height: 90vh; }
+
+.RIEInput {
+  min-width: 100%;
+  display: inline-block !important;
+  min-height: 15px; }
+  .RIEInput:hover {
+    cursor: text; }
+
+.titleContainer {
+  width: 100%; }
