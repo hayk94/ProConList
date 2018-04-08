@@ -1,12 +1,14 @@
 import React from 'react'
 
-import { Provider } from 'react-redux'
-import store from './redux'
+import { Provider } from 'unstated'
 
-import Container from './Container'
+import Pros from './Containers/Pros'
+import Cons from './Containers/Cons'
 
-const App = props => <Provider store={store}>
-  <Container />
+import View from './View'
+
+const App = props => <Provider inject={[Pros, Cons]}>
+  <View />
 </Provider>
 
 export default App

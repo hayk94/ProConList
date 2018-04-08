@@ -20,7 +20,7 @@ class List extends Component {
         dragItem={this.props.dragItem} >
         <RIEInput
           className='RIEInput'
-          change={({text}) => this.props.editItem({ _id: item._id, text })}
+          change={({text}) => this.props.editItem(item._id, text)}
           value={item.text}
           propName='text' />
       </DragItem>)}
