@@ -1,4 +1,14 @@
 import randomstring from 'randomstring'
+import update from 'immutability-helper'
+
+function dragItem (list, dragIndex, hoverIndex) {
+  const dragItem = list[dragIndex]
+  return update(this.state, {
+    cards: {
+      $splice: [[dragIndex, 1], [hoverIndex, 0, dragItem]]
+    }
+  })
+}
 
 /**
  * editItemInList - edits item in the list and returns a new array
@@ -46,5 +56,6 @@ function insertAt (arr, index, newItem) {
 
 export {
   insertAt,
-  editItemInList
+  editItemInList,
+  dragItem
 }

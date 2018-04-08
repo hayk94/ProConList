@@ -1,6 +1,6 @@
-import { EDIT_CON } from '../actions'
+import { EDIT_CON, DRAG_CON } from '../actions'
 
-import { editItemInList } from '../helpers'
+import { editItemInList, dragItem } from '../helpers'
 
 const fixture = [
   {
@@ -22,6 +22,9 @@ export default function pros (state = fixture, action) {
   switch (type) {
     case EDIT_CON:
       return editItemInList(state, _id, text)
+    case DRAG_CON:
+      const { dragIndex, hoverIndex } = action
+      return dragItem(state, dragIndex, hoverIndex)
   }
 
   return state
