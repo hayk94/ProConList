@@ -1,4 +1,6 @@
-// import { SET_TEST_REDUCER } from '../actions'
+import { EDIT_PRO } from '../actions'
+
+import { editItemInList } from '../helpers'
 
 const fixture = [
   {
@@ -16,10 +18,11 @@ const fixture = [
 ]
 
 export default function pros (state = fixture, action) {
-  // switch (action.type) {
-  //   case SET_TEST_REDUCER:
-  //     return action.payload
-  // }
+  const { type, _id, text } = action
+  switch (type) {
+    case EDIT_PRO:
+      return editItemInList(state, _id, text)
+  }
 
   return state
 }

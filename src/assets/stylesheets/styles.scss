@@ -1,47 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://necolas.github.io/normalize.css/8.0.0/normalize.css');
 
-$brand-purple: rgb(135, 140, 223);
-$brand-green: rgb(153, 251, 198);
-$font-size: 5rem;
 $roboto: "Roboto", sans-serif;
 
 body {
-  /*height: 100vh;
-  background-color: $brand-purple;
-  color: $brand-green;
-  font-size: $font-size;
-  font-weight: 900;*/
   font-family: $roboto;
 }
-
-/*
-.listsContainer {
-    width: 100%;
-}
-
-.left {
-    border-right: 1px solid black;
-}
-
-.right {
-    border-left: 1px solid black;
-}
-
-.borderBottom {
-    border-bottom: 2px solid black;
-}
-
-.myh6 {
-    margin: 0;
-    padding: 2.33em;
-    box-sizing: border-box;
-}
-
-.boxShadow {
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-}
-*/
 
 #bodyContainer {
   display: flex;
@@ -74,7 +38,7 @@ text-align: center;
 }
 
 .listContainer {
-  width: 50%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,31 +58,19 @@ text-align: center;
   border-right: 1px solid black;
 }
 
-.container {
-  display: flex;
+.list {
+  min-height: 100px;
+  max-height: 500px;
+  overflow: scroll;
+  height: 90vh;
 }
 
-.textAlignCenter {
-  text-align: center;
+.RIEInput {
+  min-width: 20px;
+  display: inline-block !important;
+  min-height: 15px;
 }
 
-.width100p {
+.titleContainer {
   width: 100%;
-}
-
-.width80p {
-  width: 80%;
-}
-
-.width50p {
-  width: 50%;
-}
-
-.flexDirCol {
-  flex-direction: column;
-}
-
-.centralize {
-  justify-content: center;
-  align-items: center;
 }
