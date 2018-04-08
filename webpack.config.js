@@ -73,7 +73,11 @@ module.exports = config
 if (process.env.NODE_ENV === 'production') {
   module.exports.plugins.push(
     new webpack.optimize.UglifyJsPlugin(),
-    new OptimizeCSSAssets()
+    new OptimizeCSSAssets(),
+    // https://reactjs.org/docs/optimizing-performance.html#webpack
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
   )
 } else {
   module.exports.devtool = 'eval-source-map' // enable devtool for better debugging experience
