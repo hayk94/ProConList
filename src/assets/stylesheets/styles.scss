@@ -69,6 +69,9 @@ text-align: center;
   min-width: 20px;
   display: inline-block !important;
   min-height: 15px;
+  &:hover {
+    cursor: text;
+  }
 }
 
 .titleContainer {

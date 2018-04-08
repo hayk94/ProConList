@@ -6,6 +6,8 @@ import Title from './List/Title'
 
 import editPro from './redux/actions/editPro'
 import editCon from './redux/actions/editCon'
+import dragPro from './redux/actions/dragPro'
+import dragCon from './redux/actions/dragCon'
 
 const Container = props => <div id='bodyContainer' className=''>
   <div id='contentContainer' className=''>
@@ -13,11 +15,11 @@ const Container = props => <div id='bodyContainer' className=''>
     <div id='listsContainer' className=''>
       <div id='leftList' className='listContainer'>
         <Title>PROS</Title>
-        <List data={props.pros} editItem={props.editPro} />
+        <List data={props.pros} editItem={props.editPro} dragItem={props.dragPro} />
       </div>
       <div className='listContainer'>
         <Title>CONS</Title>
-        <List data={props.cons} editItem={props.editCon} />
+        <List data={props.cons} editItem={props.editCon} dragItem={props.dragCon} />
       </div>
     </div>
   </div>
@@ -28,5 +30,7 @@ export default connect(state => ({
   cons: state.cons
 }), {
   editPro,
-  editCon
+  editCon,
+  dragPro,
+  dragCon
 })(Container)

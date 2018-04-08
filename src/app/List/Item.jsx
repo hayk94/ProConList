@@ -12,5 +12,6 @@ Item.propTypes = {
   text: PropTypes.string,
   elemId: PropTypes.string,
   className: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
+  dragItem: PropTypes.func
 }

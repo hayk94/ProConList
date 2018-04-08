@@ -1,13 +1,11 @@
 import randomstring from 'randomstring'
-import update from 'immutability-helper'
 
-function dragItem (list, dragIndex, hoverIndex) {
-  const dragItem = list[dragIndex]
-  return update(this.state, {
-    cards: {
-      $splice: [[dragIndex, 1], [hoverIndex, 0, dragItem]]
-    }
-  })
+function dragItem (list, startIndex, endIndex) {
+  console.warn('list', list, startIndex, endIndex)
+  const dragItem = list[startIndex]
+  const newList = insertAt(list.filter(item => item._id !== dragItem._id), endIndex, dragItem)
+  console.log('newList', newList)
+  return newList
 }
 
 /**

@@ -18,9 +18,9 @@ const fixture = [
 ]
 
 export default function pros (state = fixture, action) {
-  const { type, _id, text } = action
-  switch (type) {
+  switch (action.type) {
     case EDIT_CON:
+      const { _id, text } = action
       return editItemInList(state, _id, text)
     case DRAG_CON:
       const { dragIndex, hoverIndex } = action
